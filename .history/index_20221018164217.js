@@ -159,7 +159,6 @@ class Car {
       return this.odometer
     }
       this.odometer = this.odometer + milesCanDrive
-      this.tank = 0
       return (`ran out of gas after ${this.odometer} miles`)
     }
   
@@ -200,7 +199,6 @@ class Car {
  */
 function isEvenNumberAsync(number) {
   // ✨ implement
-  return number
 }
 
 module.exports = {

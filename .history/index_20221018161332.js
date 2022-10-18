@@ -133,7 +133,6 @@ class Car {
     this.odometer = 0 // car initilizes with zero miles
     this.tank = tankSize // car initiazes full of gas
     this.name = name
-    this.mpg = mpg
     // ✨ initialize whatever other properties are needed
   }
 
@@ -152,17 +151,15 @@ class Car {
    */
   drive(distance) {
     // ✨ implement
-    const milesCanDrive = this.tank * this.mpg
-    if(distance <= milesCanDrive){
-      this.odometer = this.odometer + distance
-      this.tank = this.tank - (distance / this.mpg)
-      return this.odometer
+    if(this.tank > (distance/mpg)){
+         this.odometer = this.odometer + distance
+         this.tank = this.tank - this.gallon
+         return distance
+    }else{
+       return `ran out of gas after ${distance - (this.tank * this.mpg)}`
     }
-      this.odometer = this.odometer + milesCanDrive
-      this.tank = 0
-      return (`ran out of gas after ${this.odometer} miles`)
-    }
-  
+    
+  }
 
   /**
    * [Exercise 6C] Adds gallons to the tank
@@ -177,11 +174,6 @@ class Car {
    */
   refuel(gallons) {
     // ✨ implement
-    if( this.tank + gallons < 20){
-      this.tank = this.tank + gallons
-}else{
-      return('tank only holds 20')
-}
   }
 }
 
@@ -200,7 +192,6 @@ class Car {
  */
 function isEvenNumberAsync(number) {
   // ✨ implement
-  return number
 }
 
 module.exports = {

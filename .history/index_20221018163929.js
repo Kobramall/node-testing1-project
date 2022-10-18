@@ -155,14 +155,12 @@ class Car {
     const milesCanDrive = this.tank * this.mpg
     if(distance <= milesCanDrive){
       this.odometer = this.odometer + distance
-      this.tank = this.tank - (distance / this.mpg)
       return this.odometer
     }
       this.odometer = this.odometer + milesCanDrive
-      this.tank = 0
       return (`ran out of gas after ${this.odometer} miles`)
     }
-  
+  }
 
   /**
    * [Exercise 6C] Adds gallons to the tank
@@ -200,7 +198,6 @@ class Car {
  */
 function isEvenNumberAsync(number) {
   // ✨ implement
-  return number
 }
 
 module.exports = {

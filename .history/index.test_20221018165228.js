@@ -125,7 +125,5 @@ describe('[Exercise 7] isEvenNumberAsync', () => {
    test('[19] resolves true if passed an even number', () => {
       expect(utils.isEvenNumberAsync(1)).toBe(1)
    })
-  test('[20] resolves false if passed an odd number', () => {
-    expect(utils.isEvenNumberAsync(1)).toBe(1)
-  })
+  // test('[20] resolves false if passed an odd number', () => {})
 })

@@ -200,7 +200,6 @@ class Car {
  */
 function isEvenNumberAsync(number) {
   // ✨ implement
-  return number
 }
 
 module.exports = {

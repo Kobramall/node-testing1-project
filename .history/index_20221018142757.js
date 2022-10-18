@@ -8,8 +8,7 @@
  */
 function trimProperties(obj) {
   // ✨ implement
-  let newObj = {...obj}
-  
+  let newObj = obj
   
   for(let prop in newObj){
     newObj[prop] = newObj[prop].trim()
@@ -27,10 +26,6 @@ function trimProperties(obj) {
  */
 function trimPropertiesMutation(obj) {
   // ✨ implement
-  for(let prop in obj){
-    obj[prop] = obj[prop].trim()
-  }
-  return obj
 }
 
 /**
@@ -43,13 +38,6 @@ function trimPropertiesMutation(obj) {
  */
 function findLargestInteger(integers) {
   // ✨ implement
-     let number = 0 
-     for(let i = 0; i < integers.length; i++){
-         if(number < integers[i]){
-          number = integers[i]
-         }
-     }
-     return number
 }
 
 class Counter {
@@ -59,7 +47,6 @@ class Counter {
    */
   constructor(initialNumber) {
     // ✨ initialize whatever properties are needed
-   this.count = initialNumber
   }
 
   /**
@@ -76,10 +63,6 @@ class Counter {
    */
   countDown() {
     // ✨ implement
-    if(this.count > 0){
-      return this.count--
-    } else{ return this.count }
-   
   }
 }
 
@@ -89,7 +72,6 @@ class Seasons {
    */
   constructor() {
     // ✨ initialize whatever properties are needed
-    this.seasons = 'spring'
   }
 
   /**
@@ -106,19 +88,6 @@ class Seasons {
    */
   next() {
     // ✨ implement
-    if(this.seasons === 'spring'){
-      this.seasons = 'summer' 
-        return this.seasons 
-    }else if(this.seasons === 'summer'){
-      this.seasons = 'fall'
-      return this.seasons 
-    }else if(this.seasons === 'fall'){
-      this.seasons = 'winter'
-      return this.seasons 
-    }else if(this.seasons === 'winter'){
-      this.seasons = 'spring'
-      return this.seasons 
-    }
   }
 }
 
@@ -132,8 +101,6 @@ class Car {
   constructor(name, tankSize, mpg) {
     this.odometer = 0 // car initilizes with zero miles
     this.tank = tankSize // car initiazes full of gas
-    this.name = name
-    this.mpg = mpg
     // ✨ initialize whatever other properties are needed
   }
 
@@ -141,7 +108,7 @@ class Car {
    * [Exercise 6B] Car.prototype.drive adds miles to the odometer and consumes fuel according to mpg
    * @param {string} distance - the distance we want the car to drive
    * @returns {number} - the updated odometer value
-   *    
+   *
    * EXAMPLE
    * const focus = new Car('focus', 20, 30)
    * focus.drive(100) // returns 100
@@ -152,17 +119,7 @@ class Car {
    */
   drive(distance) {
     // ✨ implement
-    const milesCanDrive = this.tank * this.mpg
-    if(distance <= milesCanDrive){
-      this.odometer = this.odometer + distance
-      this.tank = this.tank - (distance / this.mpg)
-      return this.odometer
-    }
-      this.odometer = this.odometer + milesCanDrive
-      this.tank = 0
-      return (`ran out of gas after ${this.odometer} miles`)
-    }
-  
+  }
 
   /**
    * [Exercise 6C] Adds gallons to the tank
@@ -177,11 +134,6 @@ class Car {
    */
   refuel(gallons) {
     // ✨ implement
-    if( this.tank + gallons < 20){
-      this.tank = this.tank + gallons
-}else{
-      return('tank only holds 20')
-}
   }
 }
 
@@ -200,7 +152,6 @@ class Car {
  */
 function isEvenNumberAsync(number) {
   // ✨ implement
-  return number
 }
 
 module.exports = {

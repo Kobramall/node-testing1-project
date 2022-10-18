@@ -44,17 +44,17 @@ describe('[Exercise 4] Counter', () => {
     counter = new utils.Counter(3) // each test must start with a fresh couter
   })
    test('[6] the FIRST CALL of counter.countDown returns the initial count', () => {
-          expect(counter.countDown()).toEqual(3)
+          expect(counter).toEqual(3)
    })
    test('[7] the SECOND CALL of counter.countDown returns the initial count minus one', () => {
-             counter.countDown()
-          expect(counter.countDown()).toEqual(2)
+             counter
+          expect(counter).toEqual(2)
    })
    test('[8] the count eventually reaches zero but does not go below zero', () => {
-                counter.countDown() 
-                counter.countDown()
-                counter.countDown()
-                expect(counter.countDown()).toEqual(0)
+                counter 
+                counter
+                counter
+                expect(counter).toEqual(0)
    })
 })
 
@@ -63,38 +63,12 @@ describe('[Exercise 5] Seasons', () => {
   beforeEach(() => {
     seasons = new utils.Seasons() // each test must start with fresh seasons
   })
-  test('[9] the FIRST call of seasons.next returns "summer"', () => {
-       expect(seasons.next()).toEqual('summer')
-  })
-  test('[10] the SECOND call of seasons.next returns "fall"', () => {
-        seasons.next()
-        expect(seasons.next()).toEqual('fall')
-  })
-  test('[11] the THIRD call of seasons.next returns "winter"', () => {
-        seasons.next()
-        seasons.next()
-        expect(seasons.next()).toEqual('winter')
-  })
-  test('[12] the FOURTH call of seasons.next returns "spring"', () => {
-       seasons.next()
-       seasons.next()
-       seasons.next()
-       expect(seasons.next()).toEqual('spring')
-  })
-  test('[13] the FIFTH call of seasons.next returns again "summer"', () => {
-    seasons.next()
-    seasons.next()
-    seasons.next()
-    seasons.next()
-    expect(seasons.next()).toEqual('summer')
-  })
-  test('[14] the 40th call of seasons.next returns "spring"', () => {
-     for(let i = 0; i < 39; i++){
-           seasons.next()
-    }
-    expect(seasons.next()).toEqual('spring')
-
-  })
+  // test('[9] the FIRST call of seasons.next returns "summer"', () => {})
+  // test('[10] the SECOND call of seasons.next returns "fall"', () => {})
+  // test('[11] the THIRD call of seasons.next returns "winter"', () => {})
+  // test('[12] the FOURTH call of seasons.next returns "spring"', () => {})
+  // test('[13] the FIFTH call of seasons.next returns again "summer"', () => {})
+  // test('[14] the 40th call of seasons.next returns "spring"', () => {})
 })
 
 describe('[Exercise 6] Car', () => {
@@ -102,30 +76,13 @@ describe('[Exercise 6] Car', () => {
   beforeEach(() => {
     focus = new utils.Car('focus', 20, 30) // each test must start with a fresh car
   })
-  test('[15] driving the car returns the updated odometer', () => {
-       expect(focus.drive(20)).toBe(20)
-       
-  })
-  test('[16] driving the car uses gas', () => {
-        focus.drive(30)
-        expect(focus.tank).toBe(19)
-  })
-  test('[17] refueling allows to keep driving', () => {
-          focus.drive(600)
-          expect(focus.drive(100)).toBe('ran out of gas after 600 miles')
-
-  })
-  test('[18] adding fuel to a full tank has no effect', () => {
-         expect(focus.refuel(100)).toBe('tank only holds 20')
-         
-  })
+  // test('[15] driving the car returns the updated odometer', () => {})
+  // test('[16] driving the car uses gas', () => {})
+  // test('[17] refueling allows to keep driving', () => {})
+  // test('[18] adding fuel to a full tank has no effect', () => {})
 })
 
 describe('[Exercise 7] isEvenNumberAsync', () => {
-   test('[19] resolves true if passed an even number', () => {
-      expect(utils.isEvenNumberAsync(1)).toBe(1)
-   })
-  test('[20] resolves false if passed an odd number', () => {
-    expect(utils.isEvenNumberAsync(1)).toBe(1)
-  })
+  // test('[19] resolves true if passed an even number', () => {})
+  // test('[20] resolves false if passed an odd number', () => {})
 })
